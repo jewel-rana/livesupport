@@ -1,0 +1,14 @@
+{
+    "name": "rajtika/livesupport",
+    "description": "A laravel package for live support system",
+    "type": "library",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Jewel Rana",
+            "email": "jewelrana.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
