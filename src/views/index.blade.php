@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--  This file has been downloaded from https://bootdey.com  -->
     <!--  All snippets are MIT license https://bootdey.com/license -->
-    <title>Bootdey.com</title>
+    <title>LiveSupport</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -890,186 +890,27 @@
 <body>
 
 <div class="container">
-    <div class="panel messages-panel" id="liveSupport">
-        <div class="contacts-list">
-            <div class="inbox-categories" id="tabs">
-                <div data-toggle="tab" class="main-tab" data-target="#waiting">Waiting <span class="badge badge-info"> 1 </span></div>
-                <div data-toggle="tab" class="main-tab" data-target="#attended" class="active"> Attended <span class="badge badge-default"> 1 </span></div>
-            </div>
-            <div class="tab-content">
-                <div id="waiting" class="contacts-outter-wrapper tab-pane">
-<!--                     <form class="panel-search-form info form-group has-feedback no-margin-bottom">
-                        <input type="text" class="form-control" name="search" placeholder="Search">
-                        <span class="fa fa-search form-control-feedback"></span>
-                    </form> -->
-                    <div class="contacts-outter">
-                        <ul class="list-unstyled contacts">
-                            <li data-toggle="tab" class="chat-tab" data-target="#liveSupportTabPane">
-                                <div class="message-count"> 1 </div>
-                                <img alt="" class="img-circle medium-image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-
-                                <div class="vcentered info-combo">
-                                    <h3 class="no-margin-bottom name"> John Doe </h3>
-                                    <h5> Hah, too late, I already bought it and my team is impleting the new design right now.</h5>
-                                </div>
-                                <div class="contacts-add">
-                                    <span class="message-time"> 2:32 <sup>AM</sup></span>
-                                    <!-- <i class="fa fa-paperclip"></i> -->
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="attended" class="contacts-outter-wrapper tab-pane active">
-                    <div class="contacts-outter">
-                        <ul class="list-unstyled contacts success">
-                            <li data-toggle="tab" class="chat-tab" data-target="#liveSupportTabPane">
-                                <div class="message-count"> 1 </div>
-                                <img alt="" class="img-circle medium-image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-
-                                <div class="vcentered info-combo">
-                                    <h3 class="no-margin-bottom name"> David Beckham </h3>
-                                    <h5> I would like to take a look at it this evening, is it possible ? </h5>
-                                </div>
-                                <div class="contacts-add">
-                                    <span class="message-time"> 2:24 <sup>AM</sup></span>
-                                    <i class="fa fa-trash-o"></i>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-content" id="liveSupportWrap">
-            <div class="tab-pane message-body active" id="liveSupportTabPane">
-                <div class="message-top">
-
-                    <div class="new-message-wrapper">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Send message to...">
-                            <a class="btn btn-danger close-new-message" href="#"><i class="fa fa-times"></i></a>
-                        </div>
-
-                        <div class="chat-footer new-message-textarea">
-                            <textarea class="send-message-text"></textarea>
-                            <label class="upload-file">
-                                <input type="file" required="">
-                                <i class="fa fa-paperclip"></i>
-                            </label>
-                            <button type="button" class="send-message-button btn-info"> <i class="fa fa-send"></i> </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-chat" id="liveSupportContent">
-                    <div class="chat-body" id="liveSupportBody">
-                        <div style="text-align: center;vertical-align: middle;">
-                            <img src="/assets/images/chat.png" style="width:220px; margin:auto;opacity: .06">
-                        </div>
-                        <!-- <div class="message info">
-                            <img alt="" class="img-circle medium-image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-
-                            <div class="message-body">
-                                <div class="message-info">
-                                    <h4> Elon Musk </h4>
-                                    <h5> <i class="fa fa-clock-o"></i> 2:25 PM </h5>
-                                </div>
-                                <hr>
-                                <div class="message-text">
-                                    I've seen your new template, Dauphin, it's amazing !
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-
-                        <div class="message my-message">
-                            <img alt="" class="img-circle medium-image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-
-                            <div class="message-body">
-                                <div class="message-body-inner">
-                                    <div class="message-info">
-                                        <h4> Dennis Novac </h4>
-                                        <h5> <i class="fa fa-clock-o"></i> 2:28 PM </h5>
-                                    </div>
-                                    <hr>
-                                    <div class="message-text">
-                                        Thanks, I think I will use this for my next dashboard system.
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-
-                        <div class="message info">
-                            <img alt="" class="img-circle medium-image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-
-                            <div class="message-body">
-                                <div class="message-info">
-                                    <h4> Elon Musk </h4>
-                                    <h5> <i class="fa fa-clock-o"></i> 2:32 PM </h5>
-                                </div>
-                                <hr>
-                                <div class="message-text">
-                                    Hah, too late, I already bought it and my team is impleting the new design right now.
-                                </div>
-                            </div>
-                            <br>
-                        </div> -->
-                    </div>
-
-                    <div class="chat-footer">
-                        <textarea class="send-message-text"></textarea>
-                        <label class="upload-file">
-                            <input type="file" required="">
-                            <i class="fa fa-paperclip"></i>
-                        </label>
-                        <button type="button" class="send-message-button btn-info"> <i class="fa fa-send"></i> </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="liveSupport"></div>
 </div>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script type="text/javascript" src="{{ asset('/assets/js/livesupport.js') }}"></script>
 <script type="text/javascript">
-var room, receiver_id, message;
+var room, receiver_id, message, socket;
 
 jQuery(document).ready( function()
 {
-
+    socket = io.connect( 'http://192.168.0.125:4000' );
     var myPlugin1 = new LiveSupport;
     myPlugin1.init(
     {
         /* custom options */
-        id : 'vid01',
-        name : 'Video 1',
-        url : 'http://www.youtube.com/embed/dXo0LextZTU?rel=0'
+        el : 'liveSupport',
+        id : 1,
+        name : 'Admin',
+        socket : socket
     });
-
-    // //call to public methods
-    // myPlugin1.method1();
-    // myPlugin1.method2();
-
-    // console.log('--------------------------------------------');
-
-    // var myPlugin2 = new LiveSupport;
-    // myPlugin2.init(
-    // {
-    //     /* custom options */
-    //     id : 'vid02',
-    //     name : 'Video 2',
-    //     url : 'http://www.youtube.com/embed/nPMAUW-4lNY?rel=0'
-    // });
-
-    // //call to public methods
-    // myPlugin2.method1();
-    // myPlugin2.method2();
-
-    // console.log('--------------------------------------------');
 
 });
 </script>
