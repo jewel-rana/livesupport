@@ -897,20 +897,19 @@
 <script type="text/javascript" src="{{ asset('/assets/js/livesupport.js') }}"></script>
 <script type="text/javascript">
 var room, receiver_id, message, socket;
-
 jQuery(document).ready( function()
 {
     socket = io.connect( 'http://192.168.0.125:4000' );
-    var myPlugin1 = new LiveSupport;
-    myPlugin1.init(
+    var livesupport = new LiveSupport;
+    livesupport.init(
     {
         /* custom options */
         el : 'liveSupport',
         id : 1,
-        name : 'Admin',
+        name : 'admin',
+        group : 'ajent',
         socket : socket
     });
-
 });
 </script>
 </body>
