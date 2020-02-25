@@ -892,25 +892,24 @@
 <div class="container">
     <div id="liveSupport"></div>
 </div>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ asset('/assets/js/socket.io.js') }}"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script type="text/javascript" src="{{ asset('/assets/js/livesupport.js') }}"></script>
 <script type="text/javascript">
 var room, receiver_id, message, socket;
-
-socket = io.connect( 'http://216.158.224.109:4000' );
 jQuery(document).ready( function()
 {
-    var myPlugin1 = new LiveSupport;
-    myPlugin1.init(
+    socket = io.connect( 'http://192.168.0.125:4000' );
+    var livesupport = new LiveSupport;
+    livesupport.init(
     {
         /* custom options */
         el : 'liveSupport',
         id : 1,
-        name : 'Admin',
+        name : 'admin',
+        group : 'ajent',
         socket : socket
     });
-
 });
 </script>
 </body>
