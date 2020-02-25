@@ -893,14 +893,14 @@
     <div id="liveSupport"></div>
 </div>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="{{ asset('/assets/js/socket.io.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/assets/js/livesupport.js') }}"></script>
 <script type="text/javascript">
 var room, receiver_id, message, socket;
 
+socket = io.connect( 'http://216.158.224.109:4000' );
 jQuery(document).ready( function()
 {
-    socket = io.connect( 'http://192.168.0.125:4000' );
     var myPlugin1 = new LiveSupport;
     myPlugin1.init(
     {
